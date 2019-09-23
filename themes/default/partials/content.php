@@ -49,7 +49,9 @@
 		<?php if ($artikel): ?>
 			<div>
 				<ul class="artikel-list artikel-list-in-box">
-					<?php foreach ($artikel as $data): ?>
+					<?php foreach ($artikel as $data): 
+						if($data['kategori']=='Agenda Desa'||trim($data['kategori']) == ''):else:?>
+					
 						<?php $abstrak = potong_teks($data['isi'], 300) ?>
 						<li class="artikel">
 							<h3 class="judul">
@@ -78,6 +80,8 @@
 								</div>
 								<br class="clearboth gb"/>
 							</li>
+<?php endif; ?>
+
 						<?php endforeach; ?>
 					</ul>
 				</div>
