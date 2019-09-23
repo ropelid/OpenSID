@@ -50,7 +50,7 @@
 			<div>
 				<ul class="artikel-list artikel-list-in-box">
 					<?php foreach ($artikel as $data): 
-						if($data['kategori']=='Agenda Desa'||trim($data['kategori']) == ''):else:?>
+						if(trim($data['kategori']) == ''):else:?>
 					
 						<?php $abstrak = potong_teks($data['isi'], 300) ?>
 						<li class="artikel">
